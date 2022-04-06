@@ -1,0 +1,1 @@
+for elem in range(len(img[row])):

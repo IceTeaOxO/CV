@@ -1,6 +1,7 @@
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
+#YCbCr-Y
 
 def equalize(src,p,f):
     #equalize
@@ -9,7 +10,7 @@ def equalize(src,p,f):
     N=m*n
     equalize = np.array([])
     for i in range(256):
-        equalize=np.append(equalize,(255/N)*(sumf(i,f)/3))
+        equalize=np.append(equalize,(84/N)*(sumf(i,f)))
     equalize = np.round(equalize,decimals=0)    
     print("E:",equalize)
 
@@ -90,9 +91,9 @@ if (__name__=='__main__'):
     #print(e)
     #print(f[0])
     cv.imshow("result",e)
-    cv.imwrite("HW3-1 Equalized Image.jpg",e)
+    cv.imwrite("HW3 Equalized Image.jpg",e)
     cv.waitKey()
-    
+
     #src = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
     #dst = cv.equalizeHist(src)
     
@@ -104,5 +105,3 @@ if (__name__=='__main__'):
 
     # # #OpenCV
     #cv.waitKey()
-    
-
