@@ -100,7 +100,7 @@ if (__name__=='__main__'):
     #cv.imshow('Source image', src)
     #cv.imshow('Equalized Image', dst)
     #cv.imshow("result",result)
-    #cv.imwrite("HW3 Equalized Image.jpg",result)
+    #cv.imwrite("HW3-1 OpenCV Equalized Image.jpg",dst)
 
     # # #OpenCV
     #cv.waitKey()
